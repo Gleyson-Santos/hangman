@@ -1,3 +1,4 @@
+from stages import stages
 import random
 
 # Step 1
@@ -15,11 +16,12 @@ word_length = len(chosen_word)
 display = []
 for _ in range(word_length):
     display.append(blanks)
-print(display)
 
 end_of_game = False
 while not end_of_game:
     guess = input('Guess a letter: ').lower()
+    print(stages[lives])
+
     for position in range(word_length):
         letter = chosen_word[position]
         if letter == guess:
